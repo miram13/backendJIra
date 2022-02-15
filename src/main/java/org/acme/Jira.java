@@ -14,7 +14,11 @@ public class Jira extends PanacheEntity {
     @Column
     public String label;
     @Column
-    public  String comment;
+    public  String request;
+    @Column
+    public String development;
+    @Column
+    public  String state;
 //    @Column
 //    public String fixversions = "";
 //    @Column

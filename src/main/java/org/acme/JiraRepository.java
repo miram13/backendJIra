@@ -11,29 +11,15 @@ package org.acme;
 public class JiraRepository implements PanacheRepository<Jira> {
 
 
-//    List<Jira> getJirasByStatus(String status) {
-//        List<Jira> jiras = listAll();
-//        List<Jira> response = new ArrayList<>();
-//        for (Jira jira : jiras) {
-//            if (jira.label.equals(status)) {
-//                response.add(jira);
-//            }
-//        }
-//        return response;
-//    }
-
-
-
-
-
 
     public Jira updateJira(long id, Jira jira) {
         Jira entity = Jira.findById(id);
         if (entity == null) {
             throw new NotFoundException();
         }
-        entity.issue = jira.issue;
-        entity.summary = jira.summary;
+//        entity.issue = jira.issue;
+        entity.request = jira.request;
+        entity.development = jira.development;
         entity.persist();
         return entity;
     }

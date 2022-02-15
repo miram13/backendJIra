@@ -9,7 +9,7 @@ package org.acme;
         import java.util.List;
 
 @Path("/Jira")
-public class GreetingResource {
+public class JiraResource {
 
 
     @Inject
